@@ -6,10 +6,25 @@ base_link:
     roll: -0.001
     pitch: 0.015
     yaw: -0.0364
-  velodyne_rear_base_link:
-    x: -0.358
-    y: 0.0
-    z: 1.631
-    roll: -0.02
-    pitch: 0.7281317
-    yaw: 3.141592
+  
+  # velodyne_rear_base_link: 
+  #   x: -0.358
+  #   y: 0.0
+  #   z: 1.631
+  #   roll: -0.02
+  #   pitch: 0.7281317
+  #   yaw: 3.141592
+
+  # -- this is the setting in xacro --
+  # <!-- embedded sensors -->
+  # <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+  # <xacro:VLP-16 parent="base_link" name="velodyne_rear" topic="velodyne_rear/velodyne_points" hz="10" samples="220" gpu="false">
+  #   <origin
+  #     xyz="${calibration['base_link']['velodyne_rear_base_link']['x']}
+  #          ${calibration['base_link']['velodyne_rear_base_link']['y']}
+  #          ${calibration['base_link']['velodyne_rear_base_link']['z']}"
+  #     rpy="${calibration['base_link']['velodyne_rear_base_link']['roll']}
+  #          ${calibration['base_link']['velodyne_rear_base_link']['pitch']}
+  #          ${calibration['base_link']['velodyne_rear_base_link']['yaw']}"
+  #   />
+  # </xacro:VLP-16>
