@@ -46,23 +46,23 @@
     </xacro:VLP-16>
 
     <!-- camera -->
-    <xacro:monocular_camera_macro
-      name="camera0/camera"
+    <xacro:camera
+      name="front_camera_joint"
       parent="sensor_kit_base_link"
       namespace=""
-      x="${calibration['sensor_kit_base_link']['traffic_light_right_camera/camera_link']['x']}"
-      y="${calibration['sensor_kit_base_link']['traffic_light_right_camera/camera_link']['y']}"
-      z="${calibration['sensor_kit_base_link']['traffic_light_right_camera/camera_link']['z']}"
-      roll="${calibration['sensor_kit_base_link']['traffic_light_right_camera/camera_link']['roll']}"
-      pitch="${calibration['sensor_kit_base_link']['traffic_light_right_camera/camera_link']['pitch']}"
-      yaw="${calibration['sensor_kit_base_link']['traffic_light_right_camera/camera_link']['yaw']}"
+      x="${calibration['sensor_kit_base_link']['front_camera_joint/front_camera_link']['x']}"
+      y="${calibration['sensor_kit_base_link']['front_camera_joint/front_camera_link']['y']}"
+      z="${calibration['sensor_kit_base_link']['front_camera_joint/front_camera_link']['z']}"
+      roll="${calibration['sensor_kit_base_link']['front_camera_joint/front_camera_link']['roll']}"
+      pitch="${calibration['sensor_kit_base_link']['front_camera_joint/front_camera_link']['pitch']}"
+      yaw="${calibration['sensor_kit_base_link']['front_camera_joint/front_camera_link']['yaw']}"
       fps="30"
       width="800"
       height="400"
       fov="1.3"
     />
     <xacro:monocular_camera_macro
-      name="camera1/camera"
+      name="top_lidar_joint/top_lidar_link"
       parent="sensor_kit_base_link"
       namespace=""
       x="${calibration['sensor_kit_base_link']['traffic_light_left_camera/camera_link']['x']}"

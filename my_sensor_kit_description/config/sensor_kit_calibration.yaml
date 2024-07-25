@@ -1,36 +1,22 @@
 sensor_kit_base_link:
-  camera0/camera_link: # Front Corner Camrea
-    x: 0.0
+  front_camera_joint/front_camera_link: 
+    x: 0.535
     y: 0.0
-    z: 0.0
+    z: 0.168
+    roll: 0.0
+    pitch: 1.5708
+    yaw: 0.0
+  top_lidar_joint/top_lidar_link: # Ouster OS1-128 (TOP)
+    x: -0.15144
+    y: 0.0
+    z: 2.08
     roll: 0.0
     pitch: 0.0
     yaw: 0.0
-  camera1/camera_link: # Front Stereo Camera
-    x: 0.0
+  front_lidar_joint/front_lidar_link: # Livox HAP (FRONT)
+    x: 0.38206
     y: 0.0
-    z: 0.0
-    roll: 0.0
-    pitch: 0.0
-    yaw: 0.0
-  camera2/camera_link: # Rear Corner Camera
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    roll: 0.0
-    pitch: 0.0
-    yaw: 0.0
-  Lidar_top_base_link: # Ouster OS1-128
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    roll: 0.0
-    pitch: 0.0
-    yaw: 0.0
-  Lidar_front_base_link: # Livox HAP 
-    x: 0.0
-    y: 0.0
-    z: 0.0
+    z: 1.71
     roll: 0.0
     pitch: 0.0
     yaw: 0.0
@@ -41,17 +27,24 @@ sensor_kit_base_link:
   #   roll: 0.0
   #   pitch: 0.0
   #   yaw: 0.0
-  GNSS_INS/gnss_ins_link: # GNSS Antenna
-    x: 0.0
-    y: 0.0
-    z: 0.0
+  gps_antenna_main_joint/gps_antenna_main_link: # GNSS Antenna
+    x: -0.01144
+    y: 0.6525
+    z: 1.7
     roll: 0.0
     pitch: 0.0
     yaw: 0.0
-  # tamagawa/imu_link: # IMU ..?
-  #   x: 0.0
-  #   y: 0.0
-  #   z: 0.0
-  #   roll: 0.0
-  #   pitch: 0.0
-  #   yaw: 0.0
+  gps_antenna_aux_joint/gps_antenna_aux_link: # GNSS Antenna/base link
+    x: -0.01144
+    y: 0.6525
+    z: 1.7
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+  imu_joint/imu_link: # IMU ..?
+    x: -0.004387
+    y: 0.0
+    z: 0.18294
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
